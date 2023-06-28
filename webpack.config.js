@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const html = require("html-loader");
 
 module.exports = {
 	entry: "./src/index.js",
@@ -16,6 +17,7 @@ module.exports = {
 	devServer: {
 		static: "./dist",
 		hot: true,
+		liveReload: false,
 	},
 	module: {
 		rules: [
@@ -45,6 +47,8 @@ module.exports = {
 		// or if we add more entry points to our webpack config then we need to add another script tage to our index.html again
 		// HtmlWebpackPlugin is used to generate an index.html file on our output dist/ folder
 		// with our generated bundles defined within our webpack config
-		new HtmlWebpackPlugin({ title: "Basic Webpack Template" }),
+		new HtmlWebpackPlugin({
+			title: "Basic Webpack Template",
+		}),
 	],
 };
