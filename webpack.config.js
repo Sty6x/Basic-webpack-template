@@ -38,6 +38,9 @@ module.exports = {
 			{
 				test: /\.html$/i,
 				loader: "html-loader",
+				options: {
+					sources: true,
+				},
 			},
 		],
 	},
@@ -49,6 +52,7 @@ module.exports = {
 		// with our generated bundles defined within our webpack config
 		new HtmlWebpackPlugin({
 			title: "Basic Webpack Template",
+			// template: "./src/index.html",
 		}),
 	],
 };
