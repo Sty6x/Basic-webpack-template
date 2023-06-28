@@ -1,2 +1,2 @@
 # basic-webpack-template
-A barebones webpack template for trying out different things in webpack
+A barebones webpack template for learning webpack 
